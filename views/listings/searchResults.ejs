@@ -1,0 +1,12 @@
+ 
+    <h1>Search Results</h1>
+<ul>
+  <% listings.forEach(listing => { %>
+    <li>
+      <h2><%= listing.title %></h2>
+      <p><%= listing.location %>, <%= listing.country %></p>
+      <p>₹<%= listing.price %>/Night</p>
+      <img src="<%= listing.image.url %>" alt="Listing image" width="200">
+    </li>
+  <% }) %>
+</ul>

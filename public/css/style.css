@@ -1,0 +1,141 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+   
+} 
+ .container{
+    flex: 1;
+ }
+
+.navbar{
+
+    height:4rem;
+    background-color: white;
+}
+.navbar .nav-link {
+  color: #343a40;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: #e9ecef; /* Light gray background */
+  color: #0d6efd !important; /* Bootstrap primary */
+}
+
+
+
+.fa-compass{
+
+    color: #fe424d;
+    font-size:2rem;
+}
+.nav-link{
+
+    color:#222222 !important;
+}
+/* footer*/
+ .f-info-links a {
+  text-decoration: none;
+ }
+
+  .f-info-links a:hover {
+
+    text-decoration: underline;
+  }
+
+   .f-info-links,.f-info-social,.f-info-brand{
+
+     width:100%;
+     vertical-align: middle;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .f-info-social i{
+        margin-right: 1rem;
+        height:1.2rem;
+     }
+   
+   .f-info {
+     text-align: center;
+     height: 6rem;
+     display:flex;
+     background-color: #ebebeb;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: space-evenly;
+   }
+
+    .listing-card {
+        border:none !important;
+        margin-bottom: 2rem;
+
+
+    }
+    .card-img-top{
+        border-radius: 1rem;
+       width:100% !important;
+       object-fit:cover !important;
+    }
+    .card-body{
+        padding: 0 !important;
+    }
+     .card-text {
+ 
+         font-weight:400; 
+         color:black;
+     }
+
+    .listing-link{
+        text-decoration: none;
+    }
+    /* CARD effect */
+
+    .card-img-overlay{
+        opacity:0;
+    }
+     .card-img-overlay:hover{
+        opacity:0.1;
+        background-color: white;
+    }
+    /* new page */
+     .add-btn{
+   background-color:#fe424d !important;
+    border: none !important;
+    }
+    /* edit page*/
+    .edit-btn{
+        background-color: #fe424d !important;
+            border: none !important;
+    }
+
+    /* show page */
+      
+    .show-img{
+     height:30vh;
+     
+
+    }
+    .btns{
+        display:flex;
+    }
+    .show-card{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* map */
+    #map
+    { 
+     height:400px;
+     width: 80vh; }
+
+
+
+
+
