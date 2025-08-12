@@ -25,10 +25,7 @@
   //  const MONGO_URL= "mongodb://127.0.0.1:27017/wanderlust";
     const dbUrl =process.env.ATLASDB_URL;
 
-       app.get('/', (req, res) => {
-  res.render('/listings');
-    });
-
+    
 
       main()
        .then(()=>{
@@ -76,9 +73,7 @@ async function main(){
       },
     };
 
-    // app.get("/",(req,res)=>{
-    //      res.send("i am  root");
-    // });
+   
 //session,flash,passport
 
   
@@ -100,6 +95,10 @@ async function main(){
        res.locals.error = req.flash("error");
        res.locals.currentUser = req.user ;
       next();
+    });
+
+       app.get('/', (req, res) => {
+  res.render('index');
     });
 
 
