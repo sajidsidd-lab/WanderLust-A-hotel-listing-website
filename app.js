@@ -26,7 +26,7 @@
     const dbUrl =process.env.ATLASDB_URL;
 
        app.get('/', (req, res) => {
-  res.send('homepage working');
+  res.render('index');
     });
 
 
