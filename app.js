@@ -25,6 +25,11 @@
   //  const MONGO_URL= "mongodb://127.0.0.1:27017/wanderlust";
     const dbUrl =process.env.ATLASDB_URL;
 
+       app.get('/', (req, res) => {
+  res.send('homepage working');
+    });
+
+
       main()
        .then(()=>{
         console.log("connect to db");
@@ -87,10 +92,7 @@ async function main(){
     passport.serializeUser(User.serializeUser());
     passport.deserializeUser(User.deserializeUser());
 
-    app.get('/', (req, res) => {
-  res.render('index');
-    });
-
+ 
 
 
     app.use((req,res,next)=>{
