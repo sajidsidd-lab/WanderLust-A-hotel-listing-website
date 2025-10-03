@@ -21,6 +21,7 @@
     const passport= require("passport");
     const LocalStrategy = require("passport-local");
     const User = require("./models/user.js");
+    const Listing = require("./models/listing");
 
   //  const MONGO_URL= "mongodb://127.0.0.1:27017/wanderlust";
     const dbUrl =process.env.ATLASDB_URL;
@@ -96,11 +97,12 @@ async function main(){
        res.locals.currentUser = req.user ;
       next();
     });
+ // make sure this is at the top
 
-       app.get('/', (req, res) => {
-  res.render('listings/index');
-    });
-
+app.get('/', async (req, res) => {
+  const allListings = await Listing.find({});
+  res.render('listings/index', { allListings }); // ✅ pass data to view
+});
 
    app.use("/listings",listingRouter);
     app.use("/listings/:id/reviews",reviewsRouter);
