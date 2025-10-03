@@ -98,7 +98,7 @@ async function main(){
     });
 
        app.get('/', (req, res) => {
-  res.render('index');
+  res.render('listings/index');
     });
 
 
