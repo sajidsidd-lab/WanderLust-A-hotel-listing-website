@@ -6,12 +6,12 @@
 
 module.exports.index= async(req,res)=>{
      const allListings = await  Listing.find({});
-     res.render("listings/index.ejs",{allListings});
+     res.render("listings/index",{allListings});
     };
 
  module.exports.renderNewForm = (req,res)=>{
    
-      res.render("listings/new.ejs");
+      res.render("listings/new");
 
   };
 
@@ -29,7 +29,7 @@ module.exports.index= async(req,res)=>{
         req.flash("error","listing you requested for doesn't exist");
          return res.redirect("/listings");
        }
-         res.render("listings/show.ejs",{listing});
+         res.render("listings/show",{listing});
   
   
     };
@@ -67,7 +67,7 @@ module.exports.index= async(req,res)=>{
           }
            let originalImageUrl = listing.image.url;
            originalImageUrl= originalImageUrl.replace("/upload","/upload/h_300,w_250")
-            res.render("listings/edit.ejs",{listing,originalImageUrl});
+            res.render("listings/edit",{listing,originalImageUrl});
             };  
 
      
